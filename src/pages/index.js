@@ -1,12 +1,26 @@
-import * as React from "react"
+import React from "react"
+import styled, {ThemeProvider} from 'styled-components'
+import {Toggle} from '../components/Toggle'
 import Content from '../components/Content'
+import {GlobalStyles, lightTheme, darkTheme} from '../styles/globalStyles'
+import {useDarkMode} from '../styles/useDarkMode'
 
+const Wrapper = styled.div`
+max-width: 70%;
+margin: 8rem auto 0;
+`
 // markup
 const IndexPage = () => {
+
+const [theme, toggleTheme] = useDarkMode()
+const themeMode = theme === 'light' ? lightTheme : darkTheme 
   return (
-    <div>
+    <ThemeProvider theme={themeMode}>
+    <Wrapper /> 
+    <GlobalStyles />
     <Content /> 
-    </div>
+    <Toggle  theme={theme} toggleTheme={toggleTheme}/>
+    </ThemeProvider>
   )
 }
 
