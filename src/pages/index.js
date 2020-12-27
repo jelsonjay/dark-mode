@@ -16,10 +16,11 @@ const [theme, toggleTheme] = useDarkMode()
 const themeMode = theme === 'light' ? lightTheme : darkTheme 
   return (
     <ThemeProvider theme={themeMode}>
-    <Wrapper /> 
+    <Wrapper> 
     <GlobalStyles />
     <Content /> 
     <Toggle  theme={theme} toggleTheme={toggleTheme}/>
+    </ Wrapper> 
     </ThemeProvider>
   )
 }

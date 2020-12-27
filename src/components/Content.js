@@ -3,7 +3,7 @@ import React from 'react'
 const Content = () => {
   return (
     <div>
-      <h1>Dark mode in Reactjs</h1>
+      <h1>Dark mode using Gatsbyjs</h1>
         <p>
         Lorem ipsum dolor sit amet consectetur adipisicing 
         elit. Soluta quo dolore eius debitis inventore 
